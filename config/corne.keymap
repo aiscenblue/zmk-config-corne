@@ -14,15 +14,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |   |  Q  |  W  |  E   |      R       |  T   |------|   Y    |  U   |  I  |  O  |  P  |  |
-// |   |  A  |  S  |  D   |      F       |  G   |------|   H    |  J   |  K  |  L  |  ;  |  |
-// |   |  Z  |  X  |  C   |      V       |  B   |------|  BKSP  |  N   |  M  |  ,  |  .  |  |
-//                 | CTRL | LGUI/MAC CMD | SHFT |------| LWR | SPC | RSE |
+// |   |  Q  |  W  |  E   | R   |  T   |------|   Y    |  U   |  I  |  O  |  P  |  |
+// |   |  A  |  S  |  D   | F   |  G   |------|   H    |  J   |  K  |  L  |  ;  |  |
+// |   |  Z  |  X  |  C   | V   |  B   |------|  BKSP  |  N   |  M  |  ,  |  .  |  |
+//                 | TAB  | ALT | LWR  |------| LWR | SPC | RSE |
                         bindings = <
    &trans   &kp Q   &kp W   &kp E        &kp R       &kp T             &kp Y      &kp U       &kp I     &kp O     &kp P      &trans
    &trans   &kp A   &kp S   &kp D        &kp F       &kp G             &kp H      &kp J       &kp K     &kp L     &kp SEMI   &trans
    &trans   &kp Z   &kp X   &kp C        &kp V       &kp B             &kp BSPC   &kp N       &kp M     &kp COMMA &kp DOT    &trans
-                            &kp LCTRL    &kp LGUI   &kp LSHFT         &mo 1      &kp SPACE   &mo 2
+                            &kp TAB      &kp LALT    &mo 1             &mo 1      &kp SPACE   &mo 2
                         >;
                 };
                 lower_layer {
@@ -30,12 +30,12 @@
 // |   |  1  |  2  |  3  |  4  |  5   |------|  \  |  /  |  9  |  0  |  =  |   |
 // |   |  6  |  7  |  8  |  9  |  0   |------|  -  | UP  |  [  |  ]  |  '  |   |
 // |   | F1  | F2  |  F3 |  F4 |  F5  |------| LFT | DWN | RHT |  `  | ENT |   |
-//                 | TAB | GUI | SHFT |------| LWR | ALT | CTR |
+//                 | TAB | CTR | SHFT |------| LWR | ALT | CTR |
                         bindings = <
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5              &kp BACKSLASH  &kp SLASH    &kp N9    &kp N0    &kp EQUAL    &trans
    &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0              &kp MINUS      &kp UP       &kp LBKT  &kp RBKT  &kp SQT      &trans
-   &trans    &trans       &trans       &trans       &trans       &trans              &kp LEFT       &kp DOWN     &kp RIGHT &kp GRAVE &kp RET      &trans
-                                       &kp TAB      &kp LGUI     &kp LSHFT           &mo 1          &kp RALT     &kp RCTRL
+   &trans    &kp F1       &kp F2       &kp F3       &kp F3       &kp F5              &kp LEFT       &kp DOWN     &kp RIGHT &kp GRAVE &kp RET      &trans
+                                       &kp TAB      &kp LCTRL    &mo 1           &mo 1          &kp RALT     &kp RCTRL
                         >;
                 };
 
