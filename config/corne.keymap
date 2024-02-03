@@ -34,22 +34,22 @@
                         bindings = <
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5              &kp BACKSLASH  &kp SLASH    &kp N9    &kp N0    &kp EQUAL    &trans
    &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0              &kp MINUS      &kp UP       &kp LBKT  &kp RBKT  &kp SQT      &trans
-   &trans    &trans       &trans       &trans       &trans       &trans              &kp LEFT       &kp DOWN     &kp RIGHT &kp GRAVE &kp RET      &trans
+   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5              &kp LEFT       &kp DOWN     &kp RIGHT &kp GRAVE &kp RET      &trans
                                        &kp TAB      &kp LGUI     &kp LSHFT           &mo 1          &kp RALT     &kp RCTRL
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------MOODE 2------------------------------------------------------
-// |   | F1  |  F2  |  F3      |  F4      |  F4      |------|  GUI  |    VOL-  |    UP    |  V OL+   |  BT_CLR      |      |
+// |   | F1  |  F2  |  F3      |  F4      |  F5      |------|  GUI  |    VOL-  |    UP    |  V OL+   |  BT_CLR      |      |
 // |   | F6  |  F7  |  F8      |  F9      |  F10     |------|  ALT  |    LFT   |    DWN   |   RHT    |  TAB         |      |
 // |   | F11 |  F12 | BT_SEL 3 | BT_SEL 4 | BT_SEL 5 |------|  ESC  | BT_SEL 0 | BT_SEL 1 | BT_SEL 2 |  ENT         |      |
 //                  | GUI      |          |  SHFT    |------|  TAB  |    ALT   |          |
                         bindings = <
-   &kp  TAB    &kp EXCL   &kp AT   &trans           &trans           &trans               &kp LGUI     &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &bt BT_CLR       &trans
-   &kp LCTRL   &trans     &trans   &trans           &trans           &trans               &kp RALT     &kp LEFT             &kp DOWN         &kp RIGHT         &kp TAB          &trans 
-   &kp LSHFT   &trans     &trans   &bt BT_SEL 3     &bt BT_SEL 4     &bt BT_SEL 5         &kp ESC      &bt BT_SEL 0         &bt BT_SEL 1     &bt BT_SEL 2      &kp RET          &trans
-                                   &kp TAB          &kp LGUI         &kp LSHFT            &kp TAB      &kp RALT             &trans
+   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5               &kp LGUI     &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &bt BT_CLR       &trans
+   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10              &kp RALT     &kp LEFT             &kp DOWN         &kp RIGHT         &kp TAB          &trans 
+   &trans   &kp F11    &kp F12   &bt BT_SEL 3     &bt BT_SEL 4     &bt BT_SEL 5         &kp ESC      &bt BT_SEL 0         &bt BT_SEL 1     &bt BT_SEL 2      &kp RET          &trans
+                                 &kp TAB          &kp LGUI         &kp LSHFT            &kp TAB      &kp RALT             &trans
                         >;
                 };
         };
