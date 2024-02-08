@@ -49,7 +49,7 @@
    &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5               &kp LGUI     &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &trans           &trans
    &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10              &kp RALT     &kp LEFT             &kp DOWN         &kp RIGHT         &kp TAB          &trans 
    &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2         &kp ESC      &kp RCTRL            &kp RALT         &kp LSHFT         &kp RET          &trans
-                                 &bt BT_PRV       &bt BT_NXT       &bt BT_CLR           &kp TAB      &kp RALT             &trans
+                                 &bt BT_CLR       &bt BT_NXT       &bt LSHIFT           &kp TAB      &kp RALT             &trans
                         >;
                 };
         };
