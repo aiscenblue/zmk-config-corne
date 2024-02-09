@@ -13,7 +13,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------
 // |   |  Q  |  W  |  E   |   R     |  T   |------|   Y    |  U   |  I  |  O  |  P  |  |
 // |   |  A  |  S  |  D   |   F     |  G   |------|   H    |  J   |  K  |  L  |  ;  |  |
 // |   |  Z  |  X  |  C   |   V     |  B   |------|  BKSP  |  N   |  M  |  ,  |  .  |  |
@@ -26,7 +26,7 @@
                         >;
                 };
                 lower_layer {
-// ------------------------------MODE 1-----------------------------------------------------------
+// ------------------------------MODE 1------------------------------------------
 // |   |  1  |  2  |  3  |  4  |  5   |------|  \  |  /   |  9  |  0  |  =  |   |
 // |   |  6  |  7  |  8  |  9  |  0   |------|  -  | PUP  |  [  |  ]  |  '  |   |
 // |   | F1  | F2  |  F3 |  F4 |  F5  |------| HME | PDWN | END |  `  |     |   |
@@ -36,12 +36,12 @@
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5              &kp BACKSLASH  &kp SLASH         &kp N9      &kp N0      &kp EQUAL    &trans
    &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0              &kp MINUS      &kp PAGE_UP       &kp LBKT    &kp RBKT    &kp SQT      &trans
    &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5              &kp HOME       &kp PAGE_DOWN     &kp END     &kp GRAVE   &trans       &trans
-                                       &trans       &trans       &kp LSHFT           &trans         &trans          &trans
+                                       &trans       &trans       &kp LSHFT           &trans         &trans            &trans
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------MOODE 2------------------------------------------------------
+// -----------------------------------MOODE 2-------------------------------------------------------------------------
 // |   | F1  |  F2  |  F3      |  F4      |  F5      |------|  GUI  |    VOL-  |    UP    |  V OL+   |  ESC   |      |
 // |   | F6  |  F7  |  F8      |  F9      |  F10     |------|       |    LFT   |    DWN   |   RHT    |  TAB   |      |
 // |   | F11 |  F12 | BT_SEL 3 | BT_SEL 4 | BT_SEL 5 |------|       |    CTRL  |    ALT   |   SHIFT  |  ENT   |      |
