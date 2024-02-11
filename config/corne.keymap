@@ -54,4 +54,23 @@
                         >;
                 };
         };
+
+        behaviors {
+                td_mt: tap_dance_mod_tap {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <1>;
+                    tapping-term-ms = <200>;
+                    bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
+                };
+            };
+        
+            keymap {
+                compatible = "zmk,keymap";
+        
+                default_layer {
+                    bindings = <
+                        &td_mt
+                    >;
+                };
+            };
 };
