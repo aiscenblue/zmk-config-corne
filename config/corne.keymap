@@ -53,7 +53,6 @@
                                  &bt BT_PRV       &bt BT_NXT       &bt BT_CLR           &trans       &trans               &trans
                         >;
                 };
-        };
 
         behaviors {
                 td_mt: tap_dance_mod_tap {
@@ -73,4 +72,5 @@
                     >;
                 };
             };
+        };
 };
