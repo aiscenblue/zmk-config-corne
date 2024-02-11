@@ -53,24 +53,24 @@
                                  &bt BT_PRV       &bt BT_NXT       &bt BT_CLR           &trans       &trans               &trans
                         >;
                 };
-
-                behaviors {
-                        td0: tap_dance_0 {
-                            compatible = "zmk,behavior-tap-dance";
-                            #binding-cells = <35>;
-                            tapping-term-ms = <200>;
-                            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
-                        };
-                    };
-                
-                    keymap {
-                        compatible = "zmk,keymap";
-                
-                        default_layer {
-                            bindings = <
-                                &td0
-                            >;
-                        };
-                    };
         };
+
+        behaviors {
+                td0: tap_dance_0 {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <35>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+                };
+            };
+        
+            keymap {
+                compatible = "zmk,keymap";
+        
+                default_layer {
+                    bindings = <
+                        &td0
+                    >;
+                };
+            };
 };
