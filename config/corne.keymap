@@ -59,7 +59,7 @@
                 combo_esc {
                         timeout-ms = <50>;
                         key-positions = <29>;
-                        bindings = <&kp EQUAL &kp SHIFT &kp DOT>;
+                        bindings = <&kp EQUAL &kp DOT>;
                 };
         };
 };
