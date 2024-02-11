@@ -56,10 +56,10 @@
         };
         combos {
                 compatible = "zmk,combos";
-                combo_esc {
-                        timeout-ms = <1000>;
-                        key-positions = <34>;
-                        bindings = <&kp EQUAL>, <&kp LSHIFT>, <&kp DOT>;
+                combo_page_up {
+                        timeout-ms = <50>;
+                        key-positions = <40 41 8>;
+                        bindings = <&kp PAGE_UP>;
                 };
         };
 };
