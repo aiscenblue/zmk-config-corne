@@ -49,7 +49,7 @@
                                                    &trans   &kp Q   &kp W   &kp E        &kp R       &kp T         
                                                    &trans   &kp A   &kp S   &kp D        &kp F       &kp G                     
                                                    &trans   &kp Z   &kp X   &kp C        &kp V       &kp B                    
-                                                                            &kp TAB      &kp LALT    &mo DOTA_SHIFT              &trans        &tog DOTA_DEF       &tog MODS
+                                                                            &kp TAB      &kp LALT    &mo DOTA_SHIFT              &trans        &tog DOTA_DEF       &trans
                                         >;
                                 };
                 dota_shift_layer {
