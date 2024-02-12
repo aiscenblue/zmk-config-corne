@@ -40,7 +40,7 @@
                                    &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI     &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &kp ESC     &trans
                                    &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &trans       &kp LEFT             &kp DOWN         &kp RIGHT         &kp TAB     &trans 
                                    &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans       &kp RCTRL            &kp RALT         &kp RSHFT         &kp RET     &trans
-                                                                 &bt BT_PRV       &bt BT_NXT       &bt BT_CLR                   &trans       &tog DOTA_DEF        &trans
+                                                                 &bt BT_PRV       &bt BT_NXT       &bt BT_CLR                   &trans       &tog DOTA_DEF        &tog MODS
                         >;
                 };
 
@@ -49,7 +49,7 @@
                                                    &trans   &kp Q   &kp W   &kp E        &kp R       &kp T         
                                                    &trans   &kp A   &kp S   &kp D        &kp F       &kp G                     
                                                    &trans   &kp Z   &kp X   &kp C        &kp V       &kp B                    
-                                                                            &kp TAB      &kp LALT    &mo DOTA_SHIFT
+                                                                            &kp TAB      &kp LALT    &mo DOTA_SHIFT              &trans        &tog DOTA_DEF       &tog MODS
                                         >;
                                 };
                 dota_shift_layer {
