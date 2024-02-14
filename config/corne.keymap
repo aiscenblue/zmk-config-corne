@@ -25,7 +25,7 @@
                                    &trans   &kp Q   &kp W          &kp E          &kp R        &kp T                     &kp Y             &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &rpi ESC P              &trans
                                    &trans   &kp A   &kp S          &kp D          &kp F        &kp G                     &rpi TAB H        &ctrl_j                     &alt_k          &shft_L                 &rpi TAB SEMI           &trans
                                    &trans   &kp Z   &kp X          &kp C          &kp V        &kp B                     &kp BSPC          &kp N                       &kp M           &kp COMMA               &kp DOT                 &trans
-                                                                   &mo HW_DEF     &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mods_mac_tap
+                                                                   &tog HW_DEF     &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mods_mac_tap
                         >;
                 };
                 code_layer {
