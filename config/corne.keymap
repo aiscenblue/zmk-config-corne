@@ -95,7 +95,7 @@
 
                 hardware_layer {
                         bindings = <
-                                   &trans       &bt BT_CLR      &trans          &trans                  &tog MAC_DEF        &tog DOTA_DEF             &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &bt BT_CLR      &trans          &trans                  &tog WIN_DEF        &trans             &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2            &bt BT_SEL 3        &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans       &trans          &trans          &trans                  &trans              &trans                    &trans     &trans    &trans    &trans   &trans     &trans
                                                                                 &trans                  &trans              &trans                    &trans     &trans    &trans
