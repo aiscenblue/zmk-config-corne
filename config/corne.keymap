@@ -97,7 +97,7 @@
                     bindings = <&kp P>, <&kp ESC>;
                 };
 
-                dota_5_Y: p_bckspc_esc {
+                dota_5_Y: dota_5_Y {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
