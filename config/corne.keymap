@@ -95,7 +95,7 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                tab_rpi: require_prior_idle {
+                tab_rpi: tab_rpi_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
