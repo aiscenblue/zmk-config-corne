@@ -83,6 +83,7 @@
                     require-prior-idle-ms = <125>;
                     bindings = <&kp>, <&kp>;
                 };
+        };
 
         win_conditional_layers {
                 compatible = "zmk,conditional-layers";
