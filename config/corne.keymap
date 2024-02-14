@@ -102,7 +102,7 @@
                     tapping-term-ms = <3000>;
                     quick-tap-ms = <3000>;
                     require-prior-idle-ms = <1000>;
-                    bindings = <&kp>, <&bt>;
+                    bindings = <&bt>, <&kp>;
                 };
 
                 space_idle: space_idle {
