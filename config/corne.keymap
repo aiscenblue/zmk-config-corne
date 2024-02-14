@@ -11,12 +11,13 @@
 #define WIN_DEF        0
 #define WIN_CODE       1
 #define WIN_MODS       2
-#define DOTA_DEF       3
-#define DOTA_SHIFT     4
-#define MAC_DEF        5
-#define MAC_CODE       6
-#define MAC_MODS       7
-#define HW_DEF         8
+#define WIN_HW_DEF     3
+#define DOTA_DEF       4
+#define DOTA_SHIFT     5
+#define MAC_DEF        6
+#define MAC_CODE       7
+#define MAC_MODS       8
+#define MAC_HW_DEF     9
 
 
 / {
@@ -46,6 +47,15 @@
                                    &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &kp TAB                 &kp LEFT             &kp DOWN         &kp RIGHT          &trans      &trans 
                                    &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &kp RCTRL            &kp RALT         &kp RSHFT          &trans      &trans
                                                                  &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &trans                  &trans               &trans
+                        >;
+                };
+
+                win_hardware_layer {
+                        bindings = <
+                                   &trans       &bt BT_CLR      &trans          &trans                  &tog MAC_DEF        &tog DOTA_DEF             &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2            &bt BT_SEL 3        &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &trans          &trans          &trans                  &trans              &trans                    &trans     &trans    &trans    &trans   &trans     &trans
+                                                                                &trans                  &trans              &trans                    &trans     &trans    &trans
                         >;
                 };
 
@@ -93,9 +103,9 @@
                         >;
                 };
 
-                hardware_layer {
+                mac_hardware_layer {
                         bindings = <
-                                   &trans       &bt BT_CLR      &trans          &trans                  &tog WIN_DEF        &trans             &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &bt BT_CLR      &trans          &trans                  &trans              &tog WIN_DEF              &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2            &bt BT_SEL 3        &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans       &trans          &trans          &trans                  &trans              &trans                    &trans     &trans    &trans    &trans   &trans     &trans
                                                                                 &trans                  &trans              &trans                    &trans     &trans    &trans
@@ -106,14 +116,14 @@
                 compatible = "zmk,conditional-layers";
                 tri_layer {
                     if-layers = <WIN_CODE WIN_MODS>;
-                    then-layer = <HW_DEF>;
+                    then-layer = <WIN_HW_DEF>;
                 };
             };
         mac_conditional_layers {
                 compatible = "zmk,conditional-layers";
                 tri_layer {
                     if-layers = <MAC_CODE MAC_MODS>;
-                    then-layer = <HW_DEF>;
+                    then-layer = <MAC_HW_DEF>;
                 };
             };
 
