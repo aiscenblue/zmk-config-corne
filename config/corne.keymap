@@ -29,10 +29,10 @@
                 };
                 code_layer {
                         bindings = <
-                                   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                      &kp BACKSLASH    &kp SLASH         &kp N9      &kp N0      &kp EQUAL    &trans
-                                   &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                      &kp MINUS        &kp PAGE_UP       &kp LBKT    &kp RBKT    &kp SQT      &trans
-                                   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                      &kp HOME         &kp PAGE_DOWN     &kp END     &kp GRAVE   &kp RET       &trans
-                                                                       &trans       &trans       &kp LSHFT                   &trans           &trans            &trans
+                                   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                      &kp RET    &trans            &kp N9      &kp N0      &kp EQUAL    &trans
+                                   &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                      &kp TAB    &kp PAGE_UP       &kp LBKT    &kp RBKT    &kp SQT      &trans
+                                   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                      &kp HOME   &kp PAGE_DOWN     &kp END     &kp GRAVE   &kp MINUS    &trans
+                                                                       &trans       &trans       &kp LSHFT                   &trans     &kp SLASH            &kp BACKSLASH
                         >;
                 };
 
@@ -40,8 +40,8 @@
                         bindings = <
                                    &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI        &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &kp ESC     &trans
                                    &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &trans          &kp LEFT             &kp DOWN         &kp RIGHT         &kp TAB     &trans 
-                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &tog DEFAULT    &kp RCTRL            &kp RALT         &kp RSHFT         &kp RET     &trans
-                                                                 &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &tog MAC        &tog DOTA_DEF        &trans
+                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans          &kp RCTRL            &kp RALT         &kp RSHFT         &trans      &trans
+                                                                 &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &trans          &tog DOTA_DEF        &trans
                         >;
                 };
 
@@ -70,5 +70,13 @@
                                                                       &kp LALT     &kp LCMD     &kp LSHFT                 &mo CODE      &kp SPACE      &mo MODS
                         >;
                 };
+
+                conditional_layers {
+                        compatible = "zmk,conditional-layers";
+                        tri_layer {
+                            if-layers = <MODS CODE>;
+                            then-layer = <MAC>;
+                        };
+                    };
         };
 };
