@@ -8,12 +8,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT 0
+#define WINDOWS_DEF    0
 #define CODE           1
 #define MODS           2
 #define DOTA_DEF       3
 #define DOTA_SHIFT     4
-#define MAC            5
+#define MAC_DEF        5
+#define HW_DEF         6
 
 / {
         keymap {
@@ -38,10 +39,10 @@
 
                 mods_layer {
                         bindings = <
-                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI        &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &kp ESC     &trans
-                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &trans          &kp LEFT             &kp DOWN         &kp RIGHT         &kp TAB     &trans 
-                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans          &kp RCTRL            &kp RALT         &kp RSHFT         &trans      &trans
-                                                                 &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &trans          &tog DOTA_DEF        &trans
+                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &kp ESC     &trans
+                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &trans                  &kp LEFT             &kp DOWN         &kp RIGHT         &kp TAB     &trans 
+                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &kp RCTRL            &kp RALT         &kp RSHFT         &trans      &trans
+                                                                 &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &trans                  &trans               &trans
                         >;
                 };
 
@@ -70,13 +71,22 @@
                                                                       &kp LALT     &kp LCMD     &kp LSHFT                 &mo CODE      &kp SPACE      &mo MODS
                         >;
                 };
-        };
 
+                hardware_layer {
+                        bindings = <
+                                   &trans   &trans          &trans          &tog WINDOWS_DEF        &tog MAC_DEF        &tog DOTA_DEF             &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2            &bt BT_SEL 3        &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans   &trans          &trans          &trans                  &trans              &trans                    &trans     &trans    &trans    &trans   &trans     &trans
+                                                                            &bt BT_CLR              &bt BT_PRV          &bt BT_NXT                &trans     &trans    &trans
+                        >;
+                };
+        };
         conditional_layers {
-                        compatible = "zmk,conditional-layers";
-                        tri_layer {
-                            if-layers = <2 1>;
-                            then-layer = <5>;
-                        };
-                    };
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                    if-layers = <1 2>;
+                    then-layer = <6>;
+                };
+            };
+
 };
