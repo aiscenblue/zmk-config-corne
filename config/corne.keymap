@@ -21,10 +21,10 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &kp U                 &kp I           &kp O               &rpi BSPC P               &trans
-                                   &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &rpi RCTRL J          &rpi RALT K     &rpi LSHIFT L       &kp SEMI                  &trans
-                                   &trans   &kp Z        &kp X        &kp C        &kp V        &kp B                     &kp BSPC          &kp N                 &kp M           &kp COMMA           &kp DOT                   &trans
-                                                                      &kp LALT     &kp LCTRL    &shft_tab                 &mods_tap         &rpi TAB SPACE     &mo MODS
+                                   &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &kp U                       &kp I           &kp O               &rpi BSPC spc_ret         &trans
+                                   &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &rpi RCTRL J                &rpi RALT K     &rpi LSHIFT L       &kp SEMI                  &trans
+                                   &trans   &kp Z        &kp X        &kp C        &kp V        &kp B                     &kp BSPC          &kp N                       &kp M           &kp COMMA           &kp DOT                   &trans
+                                                                      &kp LALT     &kp LCTRL    &shft_tab                 &mods_tap         &rpi TAB &pht_space_ret     &mo MODS
                         >;
                 };
                 code_layer {
@@ -116,6 +116,16 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <400>;
                     bindings = <&kp SPACE>, <&kp RET>;
+                };
+
+                pht_space_ret: space_ret {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "hold-preferred";
+                    tapping-term-ms = <400>;
+                    quick-tap-ms = <200>;
+                    bindings = <&kp>, <&kp>;
+                    hold-trigger-key-positions = <41>;    // <---[[hold space key]]
                 };
 
         };
