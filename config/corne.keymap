@@ -78,12 +78,12 @@
         behaviors {
                 pht: positional_hold_tap {
                     compatible = "zmk,behavior-hold-tap";
-                    #binding-cells = <2>;
+                    #binding-cells = <3>;
                     flavor = "hold-preferred";
-                    tapping-term-ms = <400>;
-                    quick-tap-ms = <200>;
+                    tapping-term-ms = <150>;
+                    quick-tap-ms = <0>;
                     bindings = <&kp>, <&kp>;
-                    hold-trigger-key-positions = <1>;    // <---[[the W key]]
+                    hold-trigger-key-positions = <2>;    // <---[[the W key]]
                 };
             };
 
