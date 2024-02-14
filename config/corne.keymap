@@ -39,9 +39,9 @@
 
                 mods_layer {
                         bindings = <
-                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP   &kp ESC     &trans
-                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &kp TAB                 &kp LEFT            &kp DOWN         &kp RIGHT         &trans     &trans 
-                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &kp RCTRL            &kp RALT         &kp RSHFT         &trans      &trans
+                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP    &kp ESC     &trans
+                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &kp TAB                 &kp LEFT             &kp DOWN         &kp RIGHT          &trans      &trans 
+                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &kp RCTRL            &kp RALT         &kp RSHFT          &trans      &trans
                                                                  &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &trans                  &trans               &trans
                         >;
                 };
