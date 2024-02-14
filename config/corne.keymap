@@ -115,7 +115,7 @@
                 spc_ret: spc_ret {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <1000>;
+                    tapping-term-ms = <125>;
                     bindings = <&rpi TAB SPACE>, <&kp RET>;  
                 };
 
