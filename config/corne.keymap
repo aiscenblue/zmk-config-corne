@@ -130,7 +130,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <500>;
-                    bindings = <&mo CODE>, <&tog MAC>;
+                    bindings = <&mo CODE>, <&tog MAC>, <&mo HW_DEF>;
                 };
 
                 p_esc_bkspc: p_esc_bkspc {
