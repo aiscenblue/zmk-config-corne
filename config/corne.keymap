@@ -132,14 +132,14 @@
                 mods_tap: mods_tap {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <500>;
-                    bindings = <&mo CODE>, <&mo MODS>, <&tog DOTA_DEF>;
+                    tapping-term-ms = <400>;
+                    bindings = <&mo CODE>, <&tog DOTA_DEF>;
                 };
 
                 mods_mac_tap: mods_mac_tap {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <500>;
+                    tapping-term-ms = <400>;
                     bindings = <&mo MODS>, <&tog MAC>;
                 };
 
