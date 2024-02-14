@@ -70,13 +70,13 @@
                                                                       &kp LALT     &kp LCMD     &kp LSHFT                 &mo CODE      &kp SPACE      &mo MODS
                         >;
                 };
+        };
 
-                conditional_layers {
+        conditional_layers {
                         compatible = "zmk,conditional-layers";
                         tri_layer {
                             if-layers = <MODS CODE>;
                             then-layer = <MAC>;
                         };
                     };
-        };
 };
