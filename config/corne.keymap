@@ -84,7 +84,7 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                bksps_ret: require_prior_idle {
+                bksps_ret: bksps_ret_prior_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
