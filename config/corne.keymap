@@ -30,17 +30,17 @@
                 code_layer {
                         bindings = <
                                    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                      &kp RET    &trans            &kp N9      &kp N0      &kp EQUAL    &trans
-                                   &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                      &kp TAB    &kp PAGE_UP       &kp LBKT    &kp RBKT    &kp SQT      &trans
-                                   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                      &kp HOME   &kp PAGE_DOWN     &kp END     &kp GRAVE   &kp MINUS    &trans
+                                   &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                      &kp TAB    &trans            &kp LBKT    &kp RBKT    &kp SQT      &trans
+                                   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                      &kp HOME   &trans            &kp END     &kp GRAVE   &kp MINUS    &trans
                                                                        &trans       &trans       &kp LSHFT                   &trans     &kp SLASH         &kp BACKSLASH
                         >;
                 };
 
                 mods_layer {
                         bindings = <
-                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &pht PAGE_UP UP           &kp C_VOLUME_UP    &kp ESC     &trans
-                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &kp TAB                 &kp LEFT             &kp DOWN         &kp RIGHT          &trans      &trans 
-                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &kp RCTRL            &kp RALT         &kp RSHFT          &trans      &trans
+                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &pht PAGE_UP UP           &kp C_VOLUME_UP      &kp ESC     &trans
+                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &kp TAB                 &pht HOME LEFT       &pht PAGE_DOWN DOWN       &kp END RIGHT        &trans      &trans 
+                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &kp RCTRL            &kp RALT                  &kp RSHFT          &trans     &trans
                                                                  &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &trans                  &trans               &trans
                         >;
                 };
@@ -78,10 +78,9 @@
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "hold-preferred";
-                    tapping-term-ms = <150>;
+                    tapping-term-ms = <100>;
                     quick-tap-ms = <0>;
                     bindings = <&kp>, <&kp>;
-                    hold-trigger-key-positions = <8>;    // <---[[UP key]]
                 };
             };
 
