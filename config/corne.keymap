@@ -88,7 +88,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp SHIFT>, <&kp CAPSLOCK>, <&tog DOTA_SHIFT>;
+                    bindings = <&kp LSHIFT>, <&kp CAPSLOCK>, <&tog DOTA_SHIFT>;
                 };
                  p_backspace_esc: p_bckspc_esc {
                     compatible = "zmk,behavior-tap-dance";
