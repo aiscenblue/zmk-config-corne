@@ -29,10 +29,10 @@
                 };
                 code_layer {
                         bindings = <
-                                   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                      &kp SLASH     &kp BACKSLASH     &kp N9              &kp N0      &kp EQUAL    &trans
-                                   &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                      &trans        &trans            &kp LBKT            &kp RBKT    &kp SQT      &trans
-                                   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                      &trans        &trans            &trans              &kp GRAVE   &kp MINUS    &trans
-                                                                       &trans       &trans       &shft_tab                   &trans        &trans            &trans
+                                   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                      &kp BACKSLASH      &kp SLASH     &kp N9              &kp N0      &kp EQUAL    &trans
+                                   &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                      &trans             &trans            &kp LBKT            &kp RBKT    &kp SQT      &trans
+                                   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                      &trans             &trans            &trans              &kp GRAVE   &kp MINUS    &trans
+                                                                       &trans       &trans       &shft_tab                   &trans             &trans            &trans
                         >;
                 };
 
@@ -126,7 +126,8 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&bksps_ret TAB SPACE>, <&kp RET>;  
+                    bindings = <&kp SPACE>, <&kp RET>;
+                    //bindings = <&bksps_ret TAB SPACE>, <&kp RET>;  
                 };
 
                 ctrl_j: ctrl_j {
