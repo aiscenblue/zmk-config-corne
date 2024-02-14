@@ -22,7 +22,7 @@
                 win_layer {
                         bindings = <
                                    &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &kp U                       &kp I           &kp O               &rpi BSPC P               &trans
-                                   &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &ralt_j                     &ralt_k         &shft_L             &kp SEMI                  &trans
+                                   &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &ctrl_j                     &alt_k          &shft_L             &kp SEMI                  &trans
                                    &trans   &kp Z        &kp X        &kp C        &kp V        &kp B                     &kp BSPC          &kp N                       &kp M           &kp COMMA           &kp DOT                   &trans
                                                                       &kp LALT     &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mo MODS
                         >;
@@ -119,18 +119,25 @@
                     bindings = <&rpi TAB SPACE>, <&kp RET>;
                 };
 
+                ctrl_j: ctrl_j {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <400>;
+                    bindings = <&rpi RCTRL J>;
+                };
+
+                alt_k: alt_k {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <400>;
+                    bindings = <&rpi LSHIFT K>;
+                };
+
                 shft_L: shft_L {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <400>;
                     bindings = <&rpi LSHIFT L>;
-                };
-
-                ralt_j: ralt_j {
-                    compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <400>;
-                    bindings = <&rpi RCTRL J>;
                 };
 
                 
