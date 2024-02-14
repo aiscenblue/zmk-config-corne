@@ -21,8 +21,8 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W        &kp E           &kp R        &kp T                     &kp Y             &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &rpi BSPC P             &trans
-                                   &trans   &kp A        &kp S        &kp D           &kp F        &kp G                     &rpi TAB H        &ctrl_j                     &alt_k          &shft_L                 &kp SEMI                &trans
+                                   &trans   &kp Q        &kp W        &kp E           &kp R        &kp T                     &kp Y             &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &rpi ESC P             &trans
+                                   &trans   &kp A        &kp S        &kp D           &kp F        &kp G                     &rpi TAB H        &ctrl_j                     &alt_k          &shft_L                 &rpi TAB SEMI           &trans
                                    &trans   &kp Z        &kp X        &kp C           &kp V        &kp B                     &kp BSPC          &kp N                       &kp M           &kp COMMA               &kp DOT                 &trans
                                                                       &trans          &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mo MODS
                         >;
@@ -38,10 +38,10 @@
 
                 mods_layer {
                         bindings = <
-                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &rpi PAGE_UP UP           &kp C_VOLUME_UP      &rpi BSPC ESC     &trans
-                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &kp TAB                 &rpi HOME LEFT       &rpi PAGE_DOWN DOWN       &rpi END RIGHT       &trans            &trans 
-                                   &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &trans               &trans                    &trans               &trans            &trans
-                                                                 &bt BT_CLR       &bt BT_NXT       &shft_tab                    &trans                  &trans               &trans
+                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &trans               &rpi PAGE_UP UP           &trans               &trans            &trans
+                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &trans                  &rpi HOME LEFT       &rpi PAGE_DOWN DOWN       &rpi END RIGHT       &trans            &trans 
+                                   &trans   &kp F11    &kp F12   &trans           &trans           &trans                       &trans                  &trans               &trans                    &trans               &trans            &trans
+                                                                 &trans           &trans           &shft_tab                    &trans                  &trans               &trans
                         >;
                 };
 
