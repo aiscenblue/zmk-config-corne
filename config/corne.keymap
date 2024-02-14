@@ -21,9 +21,7 @@
 
                 win_layer {
                         bindings = <
-                                   //  position 0         position 1       position 2
-                                   &trans &pht LEFT_SHIFT Q        &kp W            &kp E    &kp R        &kp T                     &kp Y             &kp U          &kp I     &kp O       &kp P      &trans
-                                   // &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &kp U          &kp I     &kp O       &kp P      &trans
+                                   &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &kp U          &kp I     &kp O       &kp P      &trans
                                    &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &kp J          &kp K     &kp L       &kp SEMI   &trans
                                    &trans   &kp Z        &kp X        &kp C        &kp V        &kp B                     &kp BSPC          &kp N          &kp M     &kp COMMA   &kp DOT    &trans
                                                                       &kp LALT     &kp LCTRL    &kp LSHFT                 &mo CODE          &kp SPACE      &mo MODS
@@ -40,7 +38,7 @@
 
                 mods_layer {
                         bindings = <
-                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &kp UP           &kp C_VOLUME_UP    &kp ESC     &trans
+                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                       &kp LGUI                &kp C_VOLUME_DOWN    &pht PAGE_UP UP           &kp C_VOLUME_UP    &kp ESC     &trans
                                    &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                      &kp TAB                 &kp LEFT             &kp DOWN         &kp RIGHT          &trans      &trans 
                                    &trans   &kp F11    &kp F12   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                 &trans                  &kp RCTRL            &kp RALT         &kp RSHFT          &trans      &trans
                                                                  &bt BT_CLR       &bt BT_NXT       &kp LSHFT                    &trans                  &trans               &trans
@@ -78,12 +76,12 @@
         behaviors {
                 pht: positional_hold_tap {
                     compatible = "zmk,behavior-hold-tap";
-                    #binding-cells = <3>;
+                    #binding-cells = <2>;
                     flavor = "hold-preferred";
                     tapping-term-ms = <150>;
                     quick-tap-ms = <0>;
                     bindings = <&kp>, <&kp>;
-                    hold-trigger-key-positions = <2>;    // <---[[the W key]]
+                    hold-trigger-key-positions = <8>;    // <---[[UP key]]
                 };
             };
 
