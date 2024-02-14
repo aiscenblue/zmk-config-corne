@@ -126,8 +126,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp SPACE>, <&kp RET>;
-                    //bindings = <&bksps_ret TAB SPACE>, <&kp RET>;  
+                    bindings = <&mt TAB SPACE>, <&kp RET>;  
                 };
 
                 ctrl_j: ctrl_j {
