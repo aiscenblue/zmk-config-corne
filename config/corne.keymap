@@ -21,7 +21,7 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &bksps_ret BSPC P         &trans
+                                   &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &bksps BSPC P             &trans
                                    &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &ctrl_j                     &alt_k          &shft_L                 &kp SEMI                  &trans
                                    &trans   &kp Z        &kp X        &kp C        &kp V        &kp B                     &trans            &kp N                       &kp M           &kp COMMA               &kp DOT                   &trans
                                                                       &kp LALT     &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mo MODS
@@ -84,13 +84,23 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                bksps_ret: bksps_ret_prior_idle {
+                bksps: bksps_prior_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
-                    tapping-term-ms = <150>;
-                    quick-tap-ms = <150>;
+                    tapping-term-ms = <100>;
+                    quick-tap-ms = <100>;
                     require-prior-idle-ms = <50>;
+                    bindings = <&kp>, <&kp>;
+                };
+
+                space_idle: bksps_prior_idle {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <200>;
+                    quick-tap-ms = <200>;
+                    require-prior-idle-ms = <125>;
                     bindings = <&kp>, <&kp>;
                 };
 
@@ -126,7 +136,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&mt TAB SPACE>, <&kp RET>;  
+                    bindings = <&space_idle TAB SPACE>, <&kp RET>;  
                 };
 
                 ctrl_j: ctrl_j {
