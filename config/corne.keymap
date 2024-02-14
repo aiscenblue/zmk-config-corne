@@ -9,12 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define WINDOWS_DEF    0
-#define CODE           1
-#define MODS           2
-#define DOTA_DEF       3
-#define DOTA_SHIFT     4
-#define MAC_DEF        5
-#define HW_DEF         6
+#define HW_DEF         1
+#define CODE           2
+#define MODS           3
+#define DOTA_DEF       4
+#define DOTA_SHIFT     5
+#define MAC_DEF        6
+
 
 / {
         keymap {
