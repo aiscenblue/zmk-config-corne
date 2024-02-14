@@ -87,28 +87,28 @@
                 shft_tab: shift_tab_HW_DEF {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <400>;
                     bindings = <&kp LSHIFT>, <&kp CAPSLOCK>, <&tog DOTA_SHIFT>;
                 };
                  p_esc: p_esc {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <400>;
                     bindings = <&kp P>, <&kp ESC>;
                 };
 
                 dota_5_Y: dota_5_Y {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <400>;
                     bindings = <&kp N5>, <&kp Y>;
                 };
 
                 mods_tap: mods_tap {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&mo CODE>, <&tog HW_DEF>, <&tog DOTA_DEF>;
+                    tapping-term-ms = <400>;
+                    bindings = <&mo CODE>, <&mo HW_DEF>, <&tog DOTA_DEF>;
                 };
         };
 
