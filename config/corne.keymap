@@ -94,7 +94,7 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                space_idle: bksps_prior_idle {
+                space_idle: space_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
