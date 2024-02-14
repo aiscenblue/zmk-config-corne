@@ -22,18 +22,18 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q   &kp W          &kp E          &kp R        &kp T                     &kp Y                     &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &rpi ESC P              &trans
-                                   &trans   &kp A   &kp S          &kp D          &kp F        &kp G                     &rpi TAB H                &ctrl_j                     &alt_k          &shft_L                 &rpi TAB SEMI           &trans
-                                   &trans   &kp Z   &kp X          &kp C          &kp V        &kp B                     &kp BSPC                  &kp N                       &kp M           &kp COMMA               &lt DOTA_DEF DOT        &trans
-                                                                   &trans         &kp LCTRL    &shft_tab                 &mods_tap                 &spc_ret                    &mods_mac_tap
+                                   &trans   &kp Q       &kp W        &kp E          &kp R        &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESC P              &trans
+                                   &trans   &kp A       &kp S        &kp D          &kp F        &kp G                     &kp H              &ctrl_j                &alt_k             &shft_L                 &kp SEMI                &trans
+                                   &trans   &kp Z       &kp X        &kp C          &kp V        &kp B                     &kp BSPC           &kp N                  &kp M              &kp COMMA               &lt DOTA_DEF DOT        &trans
+                                                                     &trans         &kp LCTRL    &shft_tab                 &mods_tap          &spc_ret               &mods_mac_tap
                         >;
                 };
                 code_layer {
                         bindings = <
-                                   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                      &kp BACKSLASH      &kp SLASH         &kp N9              &kp N0      &kp EQUAL    &trans
-                                   &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                      &trans             &trans            &kp LBKT            &kp RBKT    &kp SQT      &trans
-                                   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                      &trans             &trans            &trans              &kp GRAVE   &kp MINUS    &trans
-                                                                       &trans       &trans       &shft_tab                   &trans             &trans            &trans
+                                   &trans    &kp N1     &kp N2       &kp N3       &kp N4       &kp N5                      &kp BACKSLASH      &kp SLASH              &kp N9             &kp N0      &kp EQUAL    &trans
+                                   &trans    &kp N6     &kp N7       &kp N8       &kp N9       &kp N0                      &trans             &trans                 &kp LBKT           &kp RBKT    &kp SQT      &trans
+                                   &trans    &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                      &trans             &trans                 &trans             &kp GRAVE   &kp MINUS    &trans
+                                                                     &trans       &trans       &shft_tab                   &trans             &trans                 &trans
                         >;
                 };
 
