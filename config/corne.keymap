@@ -21,10 +21,10 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &kp U              &kp I           &kp O               &rpi BSPC &p_esc          &trans
-                                   &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &rpi RCTRL J       &rpi RALT K     &rni LSHIFT L       &kp SEMI                  &trans
-                                   &trans   &kp Z        &kp X        &kp C        &kp V        &kp B                     &kp BSPC          &kp N              &kp M           &kp COMMA           &kp DOT                   &trans
-                                                                      &kp LALT     &kp LCTRL    &shft_tab                 &mods_tap         &rpi TAB SPACE     &mo MODS
+                                   &trans   &kp Q        &kp W        &kp E        &kp R        &kp T                     &kp Y             &kp U                 &kp I           &kp O               &rpi BSPC &p_esc          &trans
+                                   &trans   &kp A        &kp S        &kp D        &kp F        &kp G                     &kp H             &rpi RCTRL J          &rpi RALT K     &rni LSHIFT L       &kp SEMI                  &trans
+                                   &trans   &kp Z        &kp X        &kp C        &kp V        &kp B                     &kp BSPC          &kp N                 &kp M           &kp COMMA           &kp DOT                   &trans
+                                                                      &kp LALT     &kp LCTRL    &shft_tab                 &mods_tap         &rpi TAB &spc_ret     &mo MODS
                         >;
                 };
                 code_layer {
@@ -110,6 +110,14 @@
                     tapping-term-ms = <400>;
                     bindings = <&mo CODE>, <&mo HW_DEF>, <&tog DOTA_DEF>;
                 };
+
+                spc_ret: spc_ret {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <400>;
+                    bindings = <&kp SPACE>, <&kp RET>;
+                };
+
         };
 
         win_conditional_layers {
