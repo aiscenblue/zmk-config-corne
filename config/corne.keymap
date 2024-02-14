@@ -25,7 +25,7 @@
                                    &trans   &kp Q        &kp W        &kp E           &kp R        &kp T                     &kp Y             &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &rpi ESC P              &trans
                                    &trans   &kp A        &kp S        &kp D           &kp F        &kp G                     &rpi TAB H        &ctrl_j                     &alt_k          &shft_L                 &rpi TAB SEMI           &trans
                                    &trans   &kp Z        &kp X        &kp C           &kp V        &kp B                     &kp BSPC          &kp N                       &kp M           &kp COMMA               &kp DOT                 &trans
-                                                                      &trans          &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mods_mac_tap
+                                                                      &mo HW_DEF      &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mods_mac_tap
                         >;
                 };
                 code_layer {
@@ -105,11 +105,11 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                shft_tab: shift_tab_HW_DEF {
+                shft_tab: shift_tab {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <500>;
-                    bindings = <&kp LSHIFT>, <&kp CAPSLOCK>, <&tog DOTA_SHIFT>;
+                    bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
                 };
 
                 dota_5_Y: dota_5_Y {
@@ -130,7 +130,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <500>;
-                    bindings = <&mo CODE>, <&tog MAC>, <&tog DEFAULT>;
+                    bindings = <&mo CODE>, <&tog MAC>;
                 };
 
                 p_esc_bkspc: p_esc_bkspc {
