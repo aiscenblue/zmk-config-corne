@@ -130,7 +130,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <400>;
-                    bindings = <&rpi LSHIFT K>;
+                    bindings = <&rpi LALT K>;
                 };
 
                 shft_L: shft_L {
