@@ -24,7 +24,7 @@
                                    &trans   &kp Q        &kp W        &kp E           &kp R        &kp T                     &kp Y             &rpi C_VOLUME_DOWN U        &kp I           &rpi C_VOLUME_UP O      &rpi BSPC P             &trans
                                    &trans   &kp A        &kp S        &kp D           &kp F        &kp G                     &rpi TAB H        &ctrl_j                     &alt_k          &shft_L                 &kp SEMI                &trans
                                    &trans   &kp Z        &kp X        &kp C           &kp V        &kp B                     &kp BSPC          &kp N                       &kp M           &kp COMMA               &kp DOT                 &trans
-                                                                      &mo HW_DEF      &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mo MODS
+                                                                      &trans          &kp LCTRL    &shft_tab                 &mods_tap         &spc_ret                    &mo MODS
                         >;
                 };
                 code_layer {
@@ -47,10 +47,10 @@
 
                 hardware_layer {
                         bindings = <
-                                   &trans       &bt BT_CLR      &trans          &trans                  &trans              &tog DOTA_DEF             &trans     &trans    &trans    &trans   &trans     &trans
-                                   &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2            &bt BT_SEL 3        &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
-                                   &trans       &trans          &trans          &trans                  &trans              &trans                    &trans     &trans    &trans    &trans   &trans     &trans
-                                                                                &trans                  &trans              &trans                    &trans     &trans    &trans
+                                   &trans       &bt BT_CLR      &trans          &trans              &trans            &tog DOTA_DEF             &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3      &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &trans          &trans          &trans              &trans            &trans                    &trans     &trans    &trans    &trans   &trans     &trans
+                                                                                &trans              &trans            &trans                    &trans     &trans    &trans
                         >;
                 };
 
@@ -84,16 +84,6 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                bt_rpi: bluetooth_idle {
-                    compatible = "zmk,behavior-hold-tap";
-                    #binding-cells = <2>;
-                    flavor = "tap-preferred";
-                    tapping-term-ms = <1000>;
-                    quick-tap-ms = <1000>;
-                    require-prior-idle-ms = <150>;
-                    bindings = <&kp>, <&kp>;
-                };
-
                 space_idle: space_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
@@ -107,7 +97,7 @@
                 shft_tab: shift_tab_HW_DEF {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <500>;
                     bindings = <&kp LSHIFT>, <&kp CAPSLOCK>, <&tog DOTA_SHIFT>;
                 };
 
@@ -121,7 +111,7 @@
                 mods_tap: mods_tap {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <500>;
                     bindings = <&mo CODE>, <&mo MODS>, <&tog DOTA_DEF>;
                 };
 
