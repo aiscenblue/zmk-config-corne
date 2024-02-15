@@ -22,10 +22,10 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W        &kp E          &kp R        &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P           &trans
-                                   &trans   &rpi TAB A   &ctrl_S      &alt_D         &shft_F      &rpi LCMD G               &rpi LCMD H        &shft_J                &alt_K             &ctrl_L                 &rpi TAB SEMI           &trans
-                                   &trans   &kp Z        &kp X        &kp C          &kp V        &kp B                     &kp BSPC           &kp N                  &kp M              &kp COMMA               &rpi RET DOT            &trans
-                                                                     &trans         &kp LCTRL    &shft_tab                  &mods_dota_tap     &rpi RET SPACE         &mods_mac_tap
+                                   &trans   &kp Q        &kp W        &kp E          &kp R              &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P           &trans
+                                   &trans   &rpi TAB A   &ctrl_S      &alt_D         &shft_F            &rpi LCMD G               &rpi LCMD H        &shft_J                &alt_K             &ctrl_L                 &rpi TAB SEMI           &trans
+                                   &trans   &kp Z        &kp X        &kp C          &kp V              &kp B                     &kp BSPC           &kp N                  &kp M              &kp COMMA               &rpi RET DOT            &trans
+                                                                      &trans         &rpi LCTRL LCTRL   &shft_tab                 &mods_dota_tap     &rpi RET SPACE         &mods_mac_tap
                         >;
                 };
                 code_layer {
@@ -90,7 +90,7 @@
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
                     tapping-term-ms = <200>;
-                    quick-tap-ms = <200>;
+                    quick-tap-ms = <50>;
                     require-prior-idle-ms = <120>;
                     bindings = <&kp>, <&kp>;
                 };
