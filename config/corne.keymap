@@ -23,7 +23,7 @@
                 win_layer {
                         bindings = <
                                    &trans   &kp Q       &kp W        &kp E          &kp R        &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESC P              &trans
-                                   &trans   &kp A       &ctrl_S      &alt_D         &shft_F       &kp G                     &kp H              &ctrl_J                &alt_K             &shft_L                 &kp SEMI                &trans
+                                   &trans   &kp A       &ctrl_S      &alt_D         &shft_F      &kp G                     &kp H              &shft_J                &alt_K             &ctrl_L                 &kp SEMI                &trans
                                    &trans   &kp Z       &kp X        &kp C          &kp V        &kp B                     &kp BSPC           &kp N                  &kp M              &kp COMMA               &kp DOT                 &trans
                                                                      &trans         &kp LCTRL    &shft_tab                 &mods_dota_tap     &spc_ret               &mods_mac_tap
                         >;
@@ -178,11 +178,11 @@
                     bindings = <&rpi LSHIFT F>;
                 };
 
-                ctrl_J: ctrl_J {
+                shft_J: shft_J {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&rpi RCTRL J>;
+                    bindings = <&rpi RSHIFT J>;
                 };
 
                 alt_K: alt_K {
@@ -192,11 +192,11 @@
                     bindings = <&rpi RALT K>;
                 };
 
-                shft_L: shft_L {
+                ctrl_L: ctrl_L {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&rpi RSHIFT L>;
+                    bindings = <&rpi RCTRL L>;
                 };
 
                 
