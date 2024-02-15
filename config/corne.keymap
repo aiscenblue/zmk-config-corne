@@ -156,7 +156,7 @@
                 p_esc_bkspc: p_esc_bkspc {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <500>;
                     bindings = <&bspc_rpi BSPC P>, <&kp ESC>;
                 };
 
