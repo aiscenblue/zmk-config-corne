@@ -161,7 +161,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&rpi RCTRL S>;
+                    bindings = <&rpi LCTRL S>;
                 };
 
                 alt_D: alt_D {
@@ -189,14 +189,14 @@
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&rpi LALT K>;
+                    bindings = <&rpi RALT K>;
                 };
 
                 shft_L: shft_L {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&rpi LSHIFT L>;
+                    bindings = <&rpi RSHIFT L>;
                 };
 
                 
