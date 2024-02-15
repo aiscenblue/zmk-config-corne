@@ -157,35 +157,35 @@
                     bindings = <&tab_rpi TAB SPACE>, <&kp RET>;  
                 };
 
-                ctrl_j: ctrl_S {
+                ctrl_S: ctrl_S {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&rpi RCTRL S>;
                 };
 
-                alt_k: alt_D {
+                alt_D: alt_D {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&rpi LALT D>;
                 };
 
-                shft_L: shft_F {
+                shft_F: shft_F {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&rpi LSHIFT F>;
                 };
 
-                ctrl_j: ctrl_J {
+                ctrl_J: ctrl_J {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&rpi RCTRL J>;
                 };
 
-                alt_k: alt_K {
+                alt_K: alt_K {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
