@@ -22,7 +22,7 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q       &kp W        &kp E          &kp R        &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &p_esc_bkspc            &trans
+                                   &trans   &kp Q       &kp W        &kp E          &kp R        &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &p_bkspc_esc            &trans
                                    &trans   &kp A       &ctrl_S      &alt_D         &shft_F      &kp G                     &kp H              &shft_J                &alt_K             &ctrl_L                 &kp SEMI                &trans
                                    &trans   &kp Z       &kp X        &kp C          &kp V        &kp B                     &kp BSPC           &kp N                  &kp M              &kp COMMA               &kp DOT                 &trans
                                                                      &trans         &kp LCTRL    &shft_tab                 &mods_dota_tap     &spc_ret               &mods_mac_tap
@@ -163,11 +163,11 @@
                     bindings = <&mo MODS>, <&tog MAC>;
                 };
 
-                p_esc_bkspc: p_esc_bkspc {
+                p_bkspc_esc: p_bkspc_esc {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <800>;
-                    bindings = <&bspc_rpi BSPC P>, <&kp ESC>;
+                    bindings = <&bspc_rpi ESC P>, <&kp BSPC>;
                 };
 
                 spc_ret: spc_ret {
