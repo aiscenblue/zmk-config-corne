@@ -115,6 +115,16 @@
                     bindings = <&kp>, <&kp>;
                 };
 
+                bspc_rpi: bspc_rpi_idle {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <200>;
+                    quick-tap-ms = <800>;
+                    require-prior-idle-ms = <150>;
+                    bindings = <&kp>, <&kp>;
+                };
+
                 shft_tab: shift_tab {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
@@ -146,8 +156,8 @@
                 p_esc_bkspc: p_esc_bkspc {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <800>;
-                    bindings = <&rpi BSPC P>, <&kp ESC>;
+                    tapping-term-ms = <200>;
+                    bindings = <&bspc_rpi BSPC P>, <&kp ESC>;
                 };
 
                 spc_ret: spc_ret {
