@@ -23,7 +23,7 @@
                         bindings = <
                                    &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y              &volume_rpi C_VOLUME_DOWN U   &kp I              &volume_rpi C_VOLUME_UP O      &rpi ESCAPE P     &trans
                                    &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H        &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                   &rpi SEMI TAB     &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &kp BSPC           &kp N                         &kp M              &kp COMMA                      &rpi DOT RET      &trans
+                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC  &kp N                         &kp M              &kp COMMA                      &rpi DOT RET      &trans
                                                                         &trans            &trans          &trans                         &mods_dota_tap     &kp SPACE                     &mo MODS
                         >;
                 };
@@ -96,6 +96,16 @@
                 };
 
                 arrow_rpi: arrow_rpi_idle {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <500>;
+                    quick-tap-ms = <200>;
+                    require-prior-idle-ms = <150>;
+                    bindings = <&kp>, <&kp>;
+                };
+
+                del_rpi: del_rpi_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
