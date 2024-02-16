@@ -21,18 +21,18 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W        &kp E             &kp R         &kp T                          &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P           &trans
-                                   &trans   &rpi TAB A   &ctrl_S      &alt_D            &shft_F       &rpi LCMD G                    &rpi LCMD H        &shft_J                &alt_K             &ctrl_L                 &rpi SEMI TAB           &trans
-                                   &trans   &kp Z        &kp X        &rpi CAPSLOCK C   &kp V         &kp B                          &kp BSPC           &kp N                  &kp M              &kp COMMA               &rpi DOT RET            &trans
+                                   &trans   &kp Q        &kp W        &kp E             &kp R         &kp T                          &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P     &trans
+                                   &trans   &rpi TAB A   &ctrl_S      &alt_D            &shft_F       &rpi LCMD G                    &rpi LCMD H        &shft_J                &alt_K             &ctrl_L                 &rpi SEMI TAB     &trans
+                                   &trans   &kp Z        &kp X        &rpi CAPSLOCK C   &kp V         &kp B                          &kp BSPC           &kp N                  &kp M              &kp COMMA               &dot_ret          &trans
                                                                       &trans            &trans        &trans                         &mods_dota_tap     &kp SPACE              &mo MODS
                         >;
                 };
                 code_layer {
                         bindings = <
-                                   &trans    &kp N1     &kp N2       &kp N3       &kp N4       &kp N5                           &kp BACKSLASH      &kp SLASH        &kp N9             &kp N0      &kp EQUAL    &trans
-                                   &trans    &kp N6     &kp N7       &kp N8       &kp N9       &kp N0                           &trans             &trans           &kp LBKT           &kp RBKT    &kp SQT      &trans
-                                   &trans    &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                           &trans             &trans           &trans             &kp GRAVE   &kp MINUS    &trans
-                                                                     &trans       &trans       &trans                           &trans             &trans           &trans
+                                   &trans    &kp N1     &kp N2       &kp N3       &kp N4       &kp N5                           &kp BACKSLASH      &kp SLASH          &kp LPAR           &kp RPAR      &kp EQUAL    &trans
+                                   &trans    &kp N6     &kp N7       &kp N8       &kp N9       &kp N0                           &kp LESS_THAN      &kp GREATER_THAN   &kp LBKT           &kp RBKT    &kp SQT      &trans
+                                   &trans    &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                           &trans             &trans             &trans             &kp GRAVE   &kp MINUS    &trans
+                                                                     &trans       &trans       &trans                           &trans             &trans             &trans
                         >;
                 };
 
@@ -149,6 +149,13 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&rpi RCTRL L>;
+                };
+
+                dot_ret: dot_ret {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp DOT>, <&kp RET>;
                 };
 
                 
