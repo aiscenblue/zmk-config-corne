@@ -23,7 +23,7 @@
                         bindings = <
                                    &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P     &trans
                                    &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H        &rpi RSHIFT J          &rpi RALT K        &rpi RCTRL L            &rpi SEMI TAB     &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &kp BSPC           &kp N                  &kp M              &kp COMMA               &dot_ret          &trans
+                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &kp BSPC           &kp N                  &kp M              &kp COMMA               &rpi RET DOT      &trans
                                                                         &trans            &trans          &trans                         &mods_dota_tap     &kp SPACE              &mo MODS
                         >;
                 };
