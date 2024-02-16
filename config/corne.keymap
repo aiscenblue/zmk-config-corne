@@ -30,7 +30,7 @@
                 code_layer {
                         bindings = <
                                    &trans    &kp N1        &kp N2         &kp N3         &kp N4            &kp N5                           &rpi SQT DQT      &rpi BSLH SLASH  &kp LPAR          &kp RPAR           &kp EQUAL           &trans
-                                   &trans    &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                     &kp LT            &kp GT           &rpi LBKT LBRC    &trans   &trans     &trans
+                                   &trans    &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                     &kp LT            &kp GT           &rpi LBKT LBRC    &trans             &rpi SEMI COLON     &trans
                                    &trans    &kp F1        &kp F2         &kp F3         &kp F4            &kp F5                           &trans            &trans           &trans            &rpi TILDE GRAVE   &rpi UNDER MINUS    &trans
                                                                           &trans         &trans            &trans                           &trans            &trans           &trans
                         >;
