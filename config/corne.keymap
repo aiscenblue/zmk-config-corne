@@ -12,9 +12,8 @@
 #define CODE           1
 #define MODS           2
 #define HW_DEF         3
-#define MAC            4
-#define DOTA_DEF       5
-#define DOTA_SHIFT     6
+#define DOTA_DEF       4
+#define DOTA_SHIFT     5
 
 / {
         keymap {
@@ -25,7 +24,7 @@
                                    &trans   &kp Q        &kp W        &kp E          &kp R              &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P           &trans
                                    &trans   &rpi TAB A   &ctrl_S      &alt_D         &shft_F            &rpi LCMD G               &rpi LCMD H        &shft_J                &alt_K             &ctrl_L                 &rpi TAB SEMI           &trans
                                    &trans   &kp Z        &kp X        &kp C          &kp V              &kp B                     &kp BSPC           &kp N                  &kp M              &kp COMMA               &rpi RET DOT            &trans
-                                                                      &trans         &rpi LCTRL LCTRL   &shft_tab                 &mods_dota_tap     &rpi RET SPACE         &mods_mac_tap
+                                                                      &trans         &trans             &shft_tab                 &mods_dota_tap     &rpi RET SPACE         &mo MODS
                         >;
                 };
                 code_layer {
@@ -52,15 +51,6 @@
                                    &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3      &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans       &trans          &trans          &trans              &trans            &trans                    &trans     &trans    &trans    &trans   &trans     &trans
                                                                                 &trans              &trans            &trans                    &trans     &trans    &trans
-                        >;
-                };
-
-                mac_layer {
-                        bindings = <
-                                   &trans   &trans   &trans   &trans       &trans      &trans                &trans     &trans    &trans            &trans   &trans     &trans
-                                   &trans   &trans   &trans   &trans       &trans      &trans                &trans     &trans    &trans            &trans   &trans     &trans
-                                   &trans   &trans   &trans   &trans       &trans      &trans                &trans     &trans    &trans            &trans   &trans     &trans
-                                                              &trans       &kp LCMD    &trans                &trans     &trans    &trans
                         >;
                 };
 
@@ -144,13 +134,6 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <400>;
                     bindings = <&mo CODE>, <&tog DOTA_DEF>;
-                };
-
-                mods_mac_tap: mods_mac_tap {
-                    compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <400>;
-                    bindings = <&mo MODS>, <&tog MAC>;
                 };
 
                 ctrl_S: ctrl_S {
