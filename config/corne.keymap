@@ -85,6 +85,16 @@
                     bindings = <&kp>, <&kp>;
                 };
 
+                volume_rpi: volume_rpi {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <250>;
+                    quick-tap-ms = <50>;
+                    require-prior-idle-ms = <120>;
+                    bindings = <&kp>, <&kp>;
+                };
+
                 arrow_rpi: arrow_rpi_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
