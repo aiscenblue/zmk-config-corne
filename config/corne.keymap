@@ -24,7 +24,7 @@
                                    &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y              &volume_rpi C_VOLUME_DOWN U   &kp I              &volume_rpi C_VOLUME_UP O      &rpi ESCAPE P     &trans
                                    &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H        &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                   &rpi SEMI TAB     &trans
                                    &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC  &kp N                         &kp M              &kp COMMA                      &rpi DOT RET      &trans
-                                                                        &trans            &trans          &trans                         &mods_dota_tap     &kp SPACE                     &mo MODS
+                                                                        &trans            &trans          &trans                         &mods_dota_tap     &rpi RET SPACE                &mo MODS
                         >;
                 };
                 code_layer {
