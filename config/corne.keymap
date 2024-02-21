@@ -91,7 +91,7 @@
                     tapping-term-ms = <150>;
                     quick-tap-ms = <50>;
                     require-prior-idle-ms = <120>;
-                    bindings = <&mo>, <&kp>;
+                    bindings = <&kp>, <&mo>;
                 };
 
                 arrow_rpi: arrow_rpi_idle {
