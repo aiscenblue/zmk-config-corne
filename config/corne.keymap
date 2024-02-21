@@ -20,9 +20,9 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y                 &volume_rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P        &trans
-                                   &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H           &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L            &rpi SEMI TAB        &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &arrow_comma_tap        &rpi_fast DOT RET    &trans
+                                   &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y                 &volume_rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O         &rpi ESCAPE P        &trans
+                                   &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H           &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L               &rpi SEMI TAB        &trans
+                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &rpi_mod_kp MODS COMMA     &rpi_fast DOT RET    &trans
                                                                         &trans            &trans          &mo NUM_CONF                   &code_dota_tap        &rpi RET SPACE                &mo MODS
                         >;
                 };
@@ -84,6 +84,16 @@
                     bindings = <&kp>, <&kp>;
                 };
 
+                rpi_mod_kp: rpi_mod_kp {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <150>;
+                    quick-tap-ms = <50>;
+                    require-prior-idle-ms = <120>;
+                    bindings = <&mo>, <&kp>;
+                };
+
                 arrow_rpi: arrow_rpi_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
@@ -109,13 +119,6 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp N5>, <&kp Y>;
-                };
-
-                arrow_comma_tap: arrow_comma_tap {
-                    compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp COMMA>, <&tog MOD>;
                 };
 
                 code_dota_tap: code_dota_tap {
