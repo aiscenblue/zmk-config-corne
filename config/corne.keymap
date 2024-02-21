@@ -22,7 +22,7 @@
                         bindings = <
                                    &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y                 &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P        &trans
                                    &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H           &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                  &rpi SEMI TAB        &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &comma_mods_tap               &rpi DOT RET         &trans
+                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &mods_comma_tap               &rpi DOT RET         &trans
                                                                         &trans            &trans          &mo NUM_CONF                   &mo CODE              &rpi_fast RET SPACE           &trans
                         >;
                 };
@@ -121,11 +121,11 @@
                     bindings = <&kp N5>, <&kp Y>;
                 };
 
-                comma_mods_tap: comma_mods_tap {
+                mods_comma_tap: mods_comma_tap {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&tog MODS>, <&kp COMMA>;
+                    bindings = <&kp COMMA>, <&tog MODS>;
                 };
 
         };
