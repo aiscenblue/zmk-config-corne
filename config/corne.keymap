@@ -20,10 +20,10 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                            &kp Y                    &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P        &trans
-                                   &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                      &rpi RCMD H              &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                  &rpi SEMI TAB        &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                            &del_rpi DEL BSPC        &arrow_n_tap                  &kp M              &kp COMMA                     &kp DOT              &trans
-                                                                        &trans            &trans          &tap_num                         &tap_code                &tap_ret_space                &trans
+                                   &trans   &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P        &trans
+                                   &trans   &rpi_fast TAB A   &rpi_fast LCTRL S   &rpi_fast LALT D       &rpi_fast LSHIFT F      &rpi LCMD G                      &rpi_fast RCMD H         &rpi_fast RSHIFT J            &rpi_fast RALT K   &rpi_fast RCTRL L             &rpi_fast SEMI TAB   &trans
+                                   &trans   &kp Z             &kp X               &rpi CAPSLOCK C        &kp V                   &kp B                            &del_rpi DEL BSPC        &arrow_n_tap                  &kp M              &kp COMMA                     &kp DOT              &trans
+                                                                                  &trans                 &trans                  &tap_num                         &tap_code                &tap_ret_space                &trans
                         >;
                 };
                 code_layer {
