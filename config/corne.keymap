@@ -10,9 +10,9 @@
 
 #define DEFAULT        0
 #define CODE           1
-#define MODS           2
-#define NUM_CONF       3
-#define DOTA_SHIFT     5
+#define NUM_CONF       2
+#define MODS           3
+#define DOTA_SHIFT     4
 
 / {
         keymap {
