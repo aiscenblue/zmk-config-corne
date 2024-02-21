@@ -130,7 +130,7 @@
 
         };
 
-        conditional_layers {
+        dota2_cond_layers {
                 compatible = "zmk,conditional-layers";
                 tri_layer {
                     if-layers = <NUM_CONF CODE>;
