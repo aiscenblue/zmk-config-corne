@@ -37,8 +37,8 @@
 
                 num_conf_layer {
                         bindings = <
-                                   &trans   &kp N1     &kp N2    &kp N3           &kp N4           &kp N5                               &bt BT_PRV      &bt BT_NXT      &trans           &trans            &trans            &bt BT_CLR
-                                   &trans   &kp N6     &kp N7    &kp N8           &kp N9           &kp N0                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4      &trans 
+                                   &trans   &rpi EXCL N1    &rpi AT N2     &rpi HASH N3      &rpi DLLR N4     &rpi PRCNT N5                              &bt BT_PRV      &bt BT_NXT      &trans           &trans            &trans            &bt BT_CLR
+                                   &trans   &rpi CARET N6   &rpi AMPS N7   &rpi ASTRK N8     &rpi LPAR N9     &rpi RPAR N0                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4      &trans 
                                    &trans   &trans     &trans    &trans           &trans           &trans                               &trans          &trans          &trans           &trans            &trans            &trans
                                                                  &trans           &trans           &trans                               &trans          &trans          &trans
                         >;
@@ -135,7 +135,7 @@
                     tapping-term-ms = <350>;
                     quick-tap-ms = <350>;
                     require-prior-idle-ms = <200>;
-                    bindings = <&mo>, <&tog>;
+                    bindings = <&tog>, <&mo>;
                 };
 
         };
