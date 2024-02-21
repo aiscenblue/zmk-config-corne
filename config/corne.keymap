@@ -20,10 +20,10 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y                 &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P        &trans
-                                   &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H           &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                  &rpi SEMI TAB        &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &mods_comma_tap               &rpi DOT RET         &trans
-                                                                        &trans            &trans          &mo NUM_CONF                   &tog CODE             &rpi_fast RET SPACE           &trans
+                                   &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                                          &kp Y                    &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P        &trans
+                                   &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                                    &rpi RCMD H              &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                  &rpi SEMI TAB        &trans
+                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                                          &del_rpi DEL BSPC        &kp N                         &kp M              &mods_comma_tap               &rpi DOT RET         &trans
+                                                                        &trans            &trans          &mo_tog_rpi NUM_CONF NUM_CONF                  &mo_tog_rpi CODE CODE    &rpi_fast RET SPACE           &trans
                         >;
                 };
                 code_layer {
@@ -126,6 +126,16 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp COMMA>, <&tog MODS>;
+                };
+
+                mo_tog_rpi: mo_tog_rpi {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <350>;
+                    quick-tap-ms = <350>;
+                    require-prior-idle-ms = <200>;
+                    bindings = <&mo>, <&tog>;
                 };
 
         };
