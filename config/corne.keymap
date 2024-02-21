@@ -10,9 +10,11 @@
 
 #define DEFAULT        0
 #define CODE           1
-#define NUM_CONF       2
-#define MODS           3
-#define DOTA_SHIFT     4
+#define MODS           2
+#define HW_DEF         3
+#define MAC            4
+#define DOTA_DEF       5
+#define DOTA_SHIFT     6
 
 / {
         keymap {
@@ -20,98 +22,124 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P           &trans
-                                   &trans   &rpi TAB A        &rpi LCTRL S        &rpi LALT D            &rpi LSHIFT F           &rpi LCMD G                      &rpi RCMD H              &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                  &rpi SEMI TAB           &trans
-                                   &trans   &kp Z             &kp X               &rpi CAPSLOCK C        &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N                         &kp M              &kp COMMA                     &rpi_fast DOT RET       &trans
-                                                                                  &trans                 &trans                  &tap_num                         &tap_code                &kp SPACE                     &mo MODS
+                                   &trans   &kp Q       &kp W          &kp E          &kp R              &kp T                     &kp Y              &rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P           &trans
+                                   &trans   &kp A       &rpi LCTRL S   &rpi LALT D    &rpi LSHIFT F      &rpi LCMD G               &rpi LCMD H        &rpi RSHIFT J          &rpi RALT K        &rpi RCTRL L       &kp SEMI                &trans
+                                   &trans   &kp Z       &kp X          &kp C          &kp V              &kp B                     &kp BSPC           &kp N                  &kp M              &kp COMMA               &ret_idle RET DOT       &trans
+                                                                       &trans         &trans             &shft_capslock            &mods_dota_tap     &spc_ret               &mods_mac_tap
                         >;
                 };
                 code_layer {
                         bindings = <
-                                   &trans    &kp N1        &kp N2         &kp N3         &kp N4            &kp N5                         &rpi_fast EXCL BSLH      &rpi_fast QMARK SLASH    &kp LPAR               &kp RPAR                &kp EQUAL               &trans
-                                   &trans    &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                   &rpi_fast PIPE LT        &rpi_fast CARET GT       &rpi_fast LBKT LBRC    &rpi_fast RBKT RBRC     &rpi_fast SQT DQT       &trans
-                                   &trans    &kp F1        &kp F2         &kp F3         &kp F4            &kp F5                         &rpi_fast UNDER MINUS    &trans                   &trans                 &rpi_fast TILDE GRAVE   &rpi_fast SEMI COLON     &trans
-                                                                          &trans         &trans            &trans                         &trans                   &trans                   &trans
-                        >;
-                };
-
-                num_conf_layer {
-                        bindings = <
-                                   &trans   &rpi_fast EXCL N1    &rpi_fast AT N2     &rpi_fast HASH N3      &rpi_fast DLLR N4     &rpi_fast PRCNT N5                              &bt BT_PRV      &bt BT_NXT      &trans           &trans            &trans            &bt BT_CLR
-                                   &trans   &rpi_fast CARET N6   &rpi_fast AMPS N7   &rpi_fast ASTRK N8     &rpi_fast LPAR N9     &rpi_fast RPAR N0                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4      &trans 
-                                   &trans   &trans               &trans              &trans                 &trans                &trans                                          &trans          &trans          &trans           &trans            &trans            &trans
-                                                                                     &trans                 &trans                &trans                                          &trans          &trans          &trans
+                                   &trans    &kp N1     &kp N2       &kp N3       &kp N4       &kp N5                      &kp BACKSLASH      &kp SLASH        &kp N9             &kp N0      &kp EQUAL    &trans
+                                   &trans    &kp N6     &kp N7       &kp N8       &kp N9       &kp N0                      &trans             &trans           &kp LBKT           &kp RBKT    &kp SQT      &trans
+                                   &trans    &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                      &trans             &trans           &trans             &kp GRAVE   &kp MINUS    &trans
+                                                                     &trans       &trans       &trans                      &trans             &trans           &trans
                         >;
                 };
 
                 mods_layer {
                         bindings = <
-                                   &trans      &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &arrow_rpi PAGE_UP UP           &trans                     &trans            &trans
-                                   &trans      &trans      &trans      &trans        &trans          &trans                               &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &trans            &trans 
-                                   &trans      &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &trans                          &trans                     &trans            &trans
-                                                                       &kp TAB       &kp LALT        &mo DOTA_SHIFT                       &trans       &trans                     &trans
+                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                               &trans       &trans                     &arrow_rpi PAGE_UP UP           &trans                     &trans            &trans
+                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                              &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &trans            &trans 
+                                   &trans   &kp F11    &kp F12   &trans           &trans           &trans                               &trans       &trans                     &trans                          &trans                     &trans            &trans
+                                                                 &trans           &trans           &trans                               &trans       &trans                     &trans
                         >;
                 };
+
+                hardware_layer {
+                        bindings = <
+                                   &trans       &bt BT_CLR      &trans          &trans              &bt BT_PRV        &bt BT_NXT                &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3      &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
+                                   &trans       &trans          &trans          &trans              &trans            &trans                    &trans     &trans    &trans    &trans   &trans     &trans
+                                                                                &trans              &trans            &trans                    &trans     &trans    &trans
+                        >;
+                };
+
+                mac_layer {
+                        bindings = <
+                                   &trans   &trans   &trans   &trans       &trans      &trans                &trans     &trans    &trans            &trans   &trans     &trans
+                                   &trans   &trans   &trans   &trans       &trans      &trans                &trans     &trans    &trans            &trans   &trans     &trans
+                                   &trans   &trans   &trans   &trans       &trans      &trans                &trans     &trans    &trans            &trans   &trans     &trans
+                                                              &trans       &kp LCMD    &trans                &trans     &trans    &trans
+                        >;
+                };
+
+
+                dota_default_layer {
+                                        bindings = <
+                                                   &trans   &kp Q   &kp W   &kp E        &kp R       &kp T                         &trans     &trans    &trans            &trans   &trans     &trans
+                                                   &trans   &kp A   &kp S   &kp D        &kp F       &kp G                         &trans     &trans    &trans            &trans   &trans     &trans
+                                                   &trans   &kp Z   &kp X   &kp C        &kp V       &kp B                         &trans     &trans    &trans            &trans   &trans     &trans
+                                                                            &kp TAB      &kp LALT    &mo DOTA_SHIFT                &trans     &trans    &trans
+                                        >;
+                                };
 
                 dota_shift_layer {
                          bindings = <
                                    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &dota_5_Y                           &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                              &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans    &kp F1       &kp F2       &kp F3       &kp F3       &kp F5                              &trans     &trans    &trans    &trans   &trans     &trans
-                                                                       &trans       &trans       &trans                              &trans     &trans    &trans
+                                                          &trans       &trans       &trans                                           &trans     &trans    &trans
                                         >;
                                 };
         };
 
         behaviors {
-                rpi: rpi {
-                    compatible = "zmk,behavior-hold-tap";
-                    #binding-cells = <2>;
-                    flavor = "tap-preferred";
-                    tapping-term-ms = <350>;
-                    quick-tap-ms = <350>;
-                    require-prior-idle-ms = <200>;
-                    bindings = <&kp>, <&kp>;
-                };
-
-                rpi_fast: rpi_fast {
+                rpi: require_prior_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
                     tapping-term-ms = <200>;
-                    quick-tap-ms = <50>;
+                    quick-tap-ms = <200>;
                     require-prior-idle-ms = <150>;
                     bindings = <&kp>, <&kp>;
-                };
-
-                rpi_mod_kp: rpi_mod_kp {
-                    compatible = "zmk,behavior-hold-tap";
-                    #binding-cells = <2>;
-                    flavor = "tap-preferred";
-                    tapping-term-ms = <150>;
-                    quick-tap-ms = <50>;
-                    require-prior-idle-ms = <120>;
-                    bindings = <&tog>, <&kp>;
                 };
 
                 arrow_rpi: arrow_rpi_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
-                    tapping-term-ms = <500>;
+                    tapping-term-ms = <600>;
                     quick-tap-ms = <200>;
                     require-prior-idle-ms = <150>;
                     bindings = <&kp>, <&kp>;
                 };
 
-                del_rpi: del_rpi_idle {
+                tab_rpi: tab_rpi_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
-                    tapping-term-ms = <500>;
+                    tapping-term-ms = <200>;
                     quick-tap-ms = <200>;
-                    require-prior-idle-ms = <150>;
+                    require-prior-idle-ms = <125>;
                     bindings = <&kp>, <&kp>;
+                };
+
+                ret_idle: ret_idle {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <100>;
+                    quick-tap-ms = <100>;
+                    require-prior-idle-ms = <125>;
+                    bindings = <&kp>, <&kp>;
+                };
+
+                bspc_rpi: bspc_rpi_idle {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <800>;
+                    quick-tap-ms = <800>;
+                    require-prior-idle-ms = <0>;
+                    bindings = <&kp>, <&kp>;
+                };
+
+                shft_capslock: shft_capslock {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <500>;
+                    bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
                 };
 
                 dota_5_Y: dota_5_Y {
@@ -121,27 +149,77 @@
                     bindings = <&kp N5>, <&kp Y>;
                 };
 
-                tap_num: tap_num {
-                     compatible = "zmk,behavior-tap-dance";
+                mods_dota_tap: mods_dota_tap {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <400>;
+                    bindings = <&mo CODE>, <&tog DOTA_DEF>;
+                };
+
+                mods_mac_tap: mods_mac_tap {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <400>;
+                    bindings = <&mo MODS>, <&tog MAC>;
+                };
+
+                spc_ret: spc_ret {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <250>;
+                    bindings = <&tab_rpi TAB SPACE>, <&kp RET>;  
+                };
+
+                ctrl_S: ctrl_S {
+                    compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&mo NUM_CONF>, <&tog NUM_CONF>;
+                    bindings = <&rpi LCTRL S>;
                 };
 
-                tap_code: tap_code {
-                     compatible = "zmk,behavior-tap-dance";
+                alt_D: alt_D {
+                    compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&mo CODE>, <&tog CODE>;
+                    bindings = <&rpi LALT D>;
                 };
 
-                tap_ret_space: tap_ret_space {
-                     compatible = "zmk,behavior-tap-dance";
+                shft_F: shft_F {
+                    compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <350>;
-                    bindings = <&kp SPACE>, <&kp RET>;
+                    tapping-term-ms = <200>;
+                    bindings = <&rpi LSHIFT F>;
                 };
 
+                shft_J: shft_J {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&rpi RSHIFT J>;
+                };
+
+                alt_K: alt_K {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&rpi RALT K>;
+                };
+
+                ctrl_L: ctrl_L {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&rpi RCTRL L>;
+                };
+
+                
         };
 
+        win_conditional_layers {
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                    if-layers = <CODE MODS>;
+                    then-layer = <HW_DEF>;
+                };
+            };
 };
