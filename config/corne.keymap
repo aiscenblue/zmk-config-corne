@@ -22,8 +22,8 @@
                         bindings = <
                                    &trans   &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P           &trans
                                    &trans   &rpi TAB A        &rpi LCTRL S        &rpi LALT D            &rpi LSHIFT F           &rpi LCMD G                      &rpi RCMD H              &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                  &rpi SEMI TAB           &trans
-                                   &trans   &kp Z             &kp X               &rpi CAPSLOCK C        &kp V                   &kp B                            &del_rpi DEL BSPC        &arrow_n_tap                  &kp M              &kp COMMA                     &kp DOT                 &trans
-                                                                                  &trans                 &trans                  &tap_num                         &tap_code                &tap_ret_space                &mo MODS
+                                   &trans   &kp Z             &kp X               &rpi CAPSLOCK C        &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N                         &kp M              &kp COMMA                     &rpi_fast DOT RET       &trans
+                                                                                  &trans                 &trans                  &tap_num                         &tap_code                &kp SPACE                     &mo MODS
                         >;
                 };
                 code_layer {
@@ -119,13 +119,6 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp N5>, <&kp Y>;
-                };
-
-                arrow_n_tap: arrow_n_tap {
-                    compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp N>, <&tog MODS>;
                 };
 
                 tap_num: tap_num {
