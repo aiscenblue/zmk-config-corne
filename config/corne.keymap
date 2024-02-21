@@ -11,8 +11,7 @@
 #define DEFAULT        0
 #define CODE           1
 #define MODS           2
-#define HW_DEF         3
-#define DOTA_DEF       4
+#define NUM_CONF       3
 #define DOTA_SHIFT     5
 
 / {
@@ -21,48 +20,38 @@
 
                 win_layer {
                         bindings = <
-                                   &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y              &volume_rpi C_VOLUME_DOWN U   &kp I              &volume_rpi C_VOLUME_UP O      &rpi ESCAPE P     &trans
-                                   &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H        &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L                   &rpi SEMI TAB     &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC  &kp N                         &kp M              &kp COMMA                      &rpi DOT RET      &trans
-                                                                        &trans            &trans          &trans                         &mods_dota_tap     &rpi RET SPACE                &mo MODS
+                                   &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y                 &volume_rpi C_VOLUME_DOWN U   &kp I              &rpi C_VOLUME_UP O      &rpi ESCAPE P        &trans
+                                   &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H           &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L            &rpi SEMI TAB        &trans
+                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &kp COMMA               &rpi_fast DOT RET    &trans
+                                                                        &trans            &trans          &mo NUM_CONF                   &code_dota_tap        &rpi RET SPACE                &mods_tap
                         >;
                 };
                 code_layer {
                         bindings = <
-                                   &trans    &kp N1        &kp N2         &kp N3         &kp N4            &kp N5                           &kp BSLH          &kp SLASH    &kp LPAR          &kp RPAR           &kp EQUAL           &trans
-                                   &trans    &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                     &kp LT            &kp GT       &rpi LBKT LBRC    &rpi RBKT RBRC     &rpi SEMI COLON     &trans
-                                   &trans    &kp F1        &kp F2         &kp F3         &kp F4            &kp F5                           &rpi SQT DQT      &trans       &trans            &rpi TILDE GRAVE   &rpi UNDER MINUS    &trans
-                                                                          &trans         &trans            &trans                           &trans            &trans       &trans
+                                   &trans    &kp N1        &kp N2         &kp N3         &kp N4            &kp N5                         &kp BSLH          &kp SLASH    &kp LPAR          &kp RPAR           &kp EQUAL           &trans
+                                   &trans    &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                   &kp LT            &kp GT       &rpi LBKT LBRC    &rpi RBKT RBRC     &rpi SEMI COLON     &trans
+                                   &trans    &kp F1        &kp F2         &kp F3         &kp F4            &kp F5                         &rpi SQT DQT      &trans       &trans            &rpi TILDE GRAVE   &rpi UNDER MINUS    &trans
+                                                                          &trans         &trans            &trans                         &trans            &trans       &trans
                         >;
                 };
 
                 mods_layer {
                         bindings = <
-                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                               &trans       &trans                     &arrow_rpi PAGE_UP UP           &trans                     &trans            &trans
-                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                              &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &trans            &trans 
-                                   &trans   &kp F11    &kp F12   &trans           &trans           &trans                               &trans       &trans                     &trans                          &trans                     &trans            &trans
-                                                                 &trans           &trans           &trans                               &trans       &trans                     &trans
+                                   &trans      &kp Q      &kp W      &kp E        &kp R          &kp T                               &trans       &trans                     &arrow_rpi PAGE_UP UP           &trans                     &trans            &trans
+                                   &trans      &kp A      &kp S      &kp D        &kp F          &kp G                               &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &trans            &trans 
+                                   &trans      &kp Z      &kp X      &kp C        &kp V          &kp B                               &trans       &trans                     &trans                          &trans                     &trans            &trans
+                                                                     &kp TAB      &kp LALT       &mo DOTA_SHIFT                      &trans       &trans                     &trans
                         >;
                 };
 
-                hardware_layer {
+                num_conf_layer {
                         bindings = <
-                                   &trans       &bt BT_CLR      &trans          &trans              &bt BT_PRV        &bt BT_NXT                &trans     &trans    &trans    &trans   &trans     &trans
-                                   &trans       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3      &bt BT_SEL 4              &trans     &trans    &trans    &trans   &trans     &trans
-                                   &trans       &trans          &trans          &trans              &trans            &trans                    &trans     &trans    &trans    &trans   &trans     &trans
-                                                                                &trans              &trans            &trans                    &trans     &trans    &trans
+                                   &trans   &kp F1     &kp F2    &kp F3           &kp F4           &kp F5                               &bt BT_PRV      &bt BT_NXT      &trans           &trans            &trans            &bt BT_CLR
+                                   &trans   &kp F6     &kp F7    &kp F8           &kp F9           &kp F10                              &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4      &trans 
+                                   &trans   &kp F11    &kp F12   &trans           &trans           &trans                               &trans          &trans          &trans           &trans            &trans            &trans
+                                                                 &trans           &trans           &trans                               &trans          &trans          &trans
                         >;
                 };
-
-
-                dota_default_layer {
-                                        bindings = <
-                                                   &trans   &kp Q   &kp W   &kp E        &kp R       &kp T                         &trans     &trans    &trans            &trans   &trans     &trans
-                                                   &trans   &kp A   &kp S   &kp D        &kp F       &kp G                         &trans     &trans    &trans            &trans   &trans     &trans
-                                                   &trans   &kp Z   &kp X   &kp C        &kp V       &kp B                         &trans     &trans    &trans            &trans   &trans     &trans
-                                                                            &kp TAB      &kp LALT    &mo DOTA_SHIFT                &trans     &trans    &trans
-                                        >;
-                                };
 
                 dota_shift_layer {
                          bindings = <
@@ -79,18 +68,18 @@
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
-                    tapping-term-ms = <250>;
-                    quick-tap-ms = <250>;
-                    require-prior-idle-ms = <120>;
+                    tapping-term-ms = <350>;
+                    quick-tap-ms = <350>;
+                    require-prior-idle-ms = <200>;
                     bindings = <&kp>, <&kp>;
                 };
 
-                volume_rpi: volume_rpi {
+                rpi_fast: require_prior_idle {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
-                    tapping-term-ms = <250>;
-                    quick-tap-ms = <250>;
+                    tapping-term-ms = <150>;
+                    quick-tap-ms = <50>;
                     require-prior-idle-ms = <120>;
                     bindings = <&kp>, <&kp>;
                 };
@@ -122,19 +111,19 @@
                     bindings = <&kp N5>, <&kp Y>;
                 };
 
-                mods_dota_tap: mods_dota_tap {
+                code_dota_tap: code_dota_tap {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <400>;
                     bindings = <&mo CODE>, <&tog DOTA_DEF>;
                 };
+
+                mods_tap: mods_tap {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <400>;
+                    bindings = <&mo MODS>, <&tog MODS>;
+                };
         };
 
-        win_conditional_layers {
-                compatible = "zmk,conditional-layers";
-                tri_layer {
-                    if-layers = <CODE MODS>;
-                    then-layer = <HW_DEF>;
-                };
-            };
 };
