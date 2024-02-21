@@ -64,7 +64,7 @@
         };
 
         behaviors {
-                rpi: require_prior_idle {
+                rpi: rpi {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
@@ -74,7 +74,7 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                rpi_fast: require_prior_idle {
+                rpi_fast: rpi_fast {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
