@@ -37,10 +37,10 @@
 
                 num_conf_layer {
                         bindings = <
-                                   &trans   &rpi EXCL N1    &rpi AT N2     &rpi HASH N3      &rpi DLLR N4     &rpi PRCNT N5                              &bt BT_PRV      &bt BT_NXT      &trans           &trans            &trans            &bt BT_CLR
-                                   &trans   &rpi CARET N6   &rpi AMPS N7   &rpi ASTRK N8     &rpi LPAR N9     &rpi RPAR N0                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4      &trans 
-                                   &trans   &trans          &trans         &trans            &trans           &trans                                     &trans          &trans          &trans           &trans            &trans            &trans
-                                                                           &trans            &trans           &trans                                     &trans          &trans          &trans
+                                   &trans   &rpi_fast EXCL N1    &rpi_fast AT N2     &rpi_fast HASH N3      &rpi_fast DLLR N4     &rpi_fast PRCNT N5                              &bt BT_PRV      &bt BT_NXT      &trans           &trans            &trans            &bt BT_CLR
+                                   &trans   &rpi_fast CARET N6   &rpi_fast AMPS N7   &rpi_fast ASTRK N8     &rpi_fast LPAR N9     &rpi_fast RPAR N0                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4      &trans 
+                                   &trans   &trans               &trans              &trans                 &trans                &trans                                          &trans          &trans          &trans           &trans            &trans            &trans
+                                                                                     &trans                 &trans                &trans                                          &trans          &trans          &trans
                         >;
                 };
 
@@ -78,9 +78,9 @@
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
-                    tapping-term-ms = <150>;
+                    tapping-term-ms = <200>;
                     quick-tap-ms = <50>;
-                    require-prior-idle-ms = <120>;
+                    require-prior-idle-ms = <150>;
                     bindings = <&kp>, <&kp>;
                 };
 
