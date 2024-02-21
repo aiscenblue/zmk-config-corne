@@ -123,4 +123,12 @@
 
         };
 
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                    if-layers = <NUM_CONF CODE>;
+                    then-layer = <MODS>;
+                };
+            };
+
 };
