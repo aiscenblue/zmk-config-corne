@@ -22,16 +22,16 @@
                         bindings = <
                                    &trans   &kp Q        &kp W          &kp E             &kp R           &kp T                          &kp Y                 &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O         &rpi ESCAPE P        &trans
                                    &trans   &rpi TAB A   &rpi LCTRL S   &rpi LALT D       &rpi LSHIFT F   &rpi LCMD G                    &rpi RCMD H           &rpi RSHIFT J                 &rpi RALT K        &rpi RCTRL L               &rpi SEMI TAB        &trans
-                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &rpi_mod_kp MODS COMMA     &rpi_fast DOT RET    &trans
+                                   &trans   &kp Z        &kp X          &rpi CAPSLOCK C   &kp V           &kp B                          &del_rpi DEL BSPC     &kp N                         &kp M              &comma_mod_tap             &rpi_fast DOT RET    &trans
                                                                         &trans            &trans          &mo NUM_CONF                   &mo CODE              &rpi_fast RET SPACE           &mo MODS
                         >;
                 };
                 code_layer {
                         bindings = <
-                                   &trans    &kp N1        &kp N2         &kp N3         &kp N4            &kp N5                         &kp BSLH          &kp SLASH    &kp LPAR          &kp RPAR           &kp EQUAL           &trans
-                                   &trans    &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                   &kp LT            &kp GT       &rpi LBKT LBRC    &rpi RBKT RBRC     &rpi SEMI COLON     &trans
-                                   &trans    &kp F1        &kp F2         &kp F3         &kp F4            &kp F5                         &rpi SQT DQT      &trans       &trans            &rpi TILDE GRAVE   &rpi UNDER MINUS    &trans
-                                                                          &trans         &trans            &trans                         &trans            &trans       &trans
+                                   &trans    &kp N1        &kp N2         &kp N3         &kp N4            &kp N5                         &kp BSLH             &kp SLASH    &kp LPAR               &kp RPAR                &kp EQUAL                &trans
+                                   &trans    &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                   &kp LT               &kp GT       &rpi_fast LBKT LBRC    &rpi_fast RBKT RBRC     &rpi_fast SEMI COLON     &trans
+                                   &trans    &kp F1        &kp F2         &kp F3         &kp F4            &kp F5                         &rpi_fast SQT DQT    &trans       &trans                 &rpi_fast TILDE GRAVE   &rpi_fast UNDER MINUS    &trans
+                                                                          &trans         &trans            &trans                         &trans               &trans       &trans
                         >;
                 };
 
@@ -58,7 +58,7 @@
                                    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &dota_5_Y                           &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans    &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                              &trans     &trans    &trans    &trans   &trans     &trans
                                    &trans    &kp F1       &kp F2       &kp F3       &kp F3       &kp F5                              &trans     &trans    &trans    &trans   &trans     &trans
-                                                          &trans       &trans       &trans                                           &trans     &trans    &trans
+                                                                       &trans       &trans       &trans                              &trans     &trans    &trans
                                         >;
                                 };
         };
@@ -119,6 +119,13 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp N5>, <&kp Y>;
+                };
+
+                comma_mod_tap: comma_mod_tap {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp COMMA>, <&tog MODS>;
                 };
 
         };
