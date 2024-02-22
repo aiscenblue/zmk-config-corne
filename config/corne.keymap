@@ -21,8 +21,8 @@
                 win_layer {
                         bindings = <
                                    &trans   &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P           &trans
-                                   &trans   &rpi TAB A        &rpi LCTRL S        &rpi LALT D            &rpi_fast LSHIFT F      &rpi LCMD G                      &rpi RCMD H              &rpi_fast RSHIFT J            &rpi RALT K        &rpi RCTRL L                  &rpi SEMI TAB           &trans
-                                   &trans   &kp Z             &kp X               &rpi CAPSLOCK C        &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N                         &kp M              &kp COMMA                     &kp DOT                 &trans
+                                   &trans   &rpi TAB A        &rpi LCTRL S        &rpi LALT D            &rpi_fast LSHIFT F      &rpi LCMD G                      &rpi RCMD H              &rpi_fast RSHIFT J            &rpi RALT K        &rpi RCTRL L                  &rpi_fast TAB SEMI      &trans
+                                   &trans   &kp Z             &kp X               &rpi CAPSLOCK C        &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N                         &kp M              &tap_comma_mods               &tap_dot_ret            &trans
                                                                                   &trans                 &trans                  &tap_num                         &tap_code                &rpi_fast RET SPACE           &mo MODS
                         >;
                 };
@@ -140,6 +140,20 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <350>;
                     bindings = <&kp SPACE>, <&kp RET>;
+                };
+
+                tap_comma_mods: tap_comma_mods {
+                     compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <350>;
+                    bindings = <&kp COMMA>, <&tog MODS>;
+                };
+
+                tap_dot_ret: tap_dot_ret {
+                     compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <350>;
+                    bindings = <&kp DOG>, <&kp RET>;
                 };
 
         };
