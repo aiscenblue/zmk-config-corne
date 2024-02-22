@@ -152,7 +152,7 @@
                 tap_dot_ret: tap_dot_ret {
                      compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <350>;
+                    tapping-term-ms = <250>;
                     bindings = <&kp DOT>, <&kp RET>;
                 };
 
