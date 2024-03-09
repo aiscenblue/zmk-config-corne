@@ -49,7 +49,7 @@
                                    &trans      &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &arrow_rpi PAGE_UP UP           &trans                     &trans            &trans
                                    &trans      &trans      &trans      &trans        &trans          &trans                               &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &trans            &trans 
                                    &trans      &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &trans                          &trans                     &trans            &trans
-                                                                       &kp TAB       &kp LALT        &mo DOTA_SHIFT                       &trans       &trans                     &trans
+                                                                       &kp TAB       &mo DOTA_SHIFT  &kp LALT                             &trans       &trans                     &trans
                         >;
                 };
 
